@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">SaraInternational</string>
+    <string name="account">Don't have an account?</string>
+    <string name="sign">Sign up Now?</string>
+    <string name="sign_in">Sign in?</string>
+    <string name="already_acc">already have an account?</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="about_company">Sara International a glorified name was founded in the year 2009 as eminent manufacturer,
+        exporter, supplier and trader of a diverse array of packaging products.
+        Our offered range is designed with utmost precision in accordance with the industry and ecofriendliness.
+        Sara International is totally focused on the Flexible Packaging business.</string>
+
+
 </resources>
