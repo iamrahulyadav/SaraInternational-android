@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * Created by Admin on 4/4/2018.
  */
@@ -32,6 +35,12 @@ LinearLayout SliderDots;
         HomeImage__ViewPagerAdapter productDetailsViewPagerAdapter =new HomeImage__ViewPagerAdapter(getContext());
         ViewPager.setAdapter(productDetailsViewPagerAdapter);
         dotsCount= productDetailsViewPagerAdapter.getCount();
+
+        setViewPager();
+        return view;
+    }
+
+    private void setViewPager() {
         final ImageView[]dots = new ImageView[dotsCount];
 
         for(int i=0;i<dotsCount;i++){
@@ -58,13 +67,34 @@ LinearLayout SliderDots;
                 dots[position].setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.dot));
 
             }
-
             @Override
             public void onPageScrollStateChanged(int state) {
 
             }
         });
-        return view;
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new myTimerTask(), 4000 ,4000);
+    }
+    public class myTimerTask extends TimerTask {
+        @Override
+        public void run() {
+
+            getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+
+                    if(ViewPager.getCurrentItem() == 0){
+                        ViewPager.setCurrentItem(1);
+                    } else if(ViewPager.getCurrentItem() == 1){
+                        ViewPager.setCurrentItem(2);
+                    } else
+                    {
+                        ViewPager.setCurrentItem(0);
+                    }
+
+                }
+            });
+        }
     }
 
 
