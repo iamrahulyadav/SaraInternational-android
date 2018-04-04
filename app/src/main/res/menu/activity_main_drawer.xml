@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+
+        <item
+            android:id="@+id/profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/registration"
+            android:title="Registration" />
+
+        <item
+            android:id="@+id/booking"
+            android:title="My Booking" />
+    <item
+        android:id="@+id/services"
+        android:title="Service History" />
+    <item
+        android:id="@+id/invite"
+        android:title="Invite $ Earn" />
+    <item
+            android:title="Contact Us"
+            android:id="@+id/menu_contact_us"
+            >
+                <menu>
+                        <group>
+                                <item
+                                    android:id="@+id/menu_callUs"
+                                    android:title="Call Us"/>
+                                <item
+                                    android:id="@+id/menu_emailUs"
+                                    android:title="E-mail"/>
+                        </group>
+                </menu>
+        </item>
+
+
+</menu>
