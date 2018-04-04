@@ -159,6 +159,9 @@ public class Tabbed extends AppCompatActivity implements NavigationView.OnNaviga
                 case 0:
                     HomeContent homeContent = new HomeContent();
                     return homeContent;
+                case 2:
+                    Enquiry enquiry= new Enquiry();
+                    return enquiry;
                 default:
                     return PlaceholderFragment.newInstance(position + 1);
 
