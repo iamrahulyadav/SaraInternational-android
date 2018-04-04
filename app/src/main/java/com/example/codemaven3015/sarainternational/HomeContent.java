@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,10 +20,15 @@ import java.util.TimerTask;
  * Created by Admin on 4/4/2018.
  */
 
-public class HomeContent extends android.support.v4.app.Fragment {
-RecyclerView Popular_Product;
+public class HomeContent extends android.support.v4.app.Fragment  {
 ViewPager ViewPager;
 LinearLayout SliderDots;
+
+    RecyclerView Popular_Product;
+    LinearLayoutManager layoutManager;
+
+    HomeRecycler_Card adapter;
+
     private int dotsCount;
     private ImageView[]dots;
     @Nullable
@@ -35,9 +41,25 @@ LinearLayout SliderDots;
         HomeImage__ViewPagerAdapter productDetailsViewPagerAdapter =new HomeImage__ViewPagerAdapter(getContext());
         ViewPager.setAdapter(productDetailsViewPagerAdapter);
         dotsCount= productDetailsViewPagerAdapter.getCount();
-
+        Popular_Product = view.findViewById(R.id.Popular_Product);
         setViewPager();
+        setPopularProduct();
         return view;
+    }
+
+    private void setPopularProduct()
+    {
+
+
+        Popular_Product.setHasFixedSize(true);
+        layoutManager=new LinearLayoutManager(getContext());
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        Popular_Product.setLayoutManager(layoutManager);
+        adapter=new HomeRecycler_Card(getContext());
+        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
+        Popular_Product.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
+        Popular_Product.setItemAnimator(new DefaultItemAnimator());
+        Popular_Product.setAdapter(adapter);
     }
 
     private void setViewPager() {

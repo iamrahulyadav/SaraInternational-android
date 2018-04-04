@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" >
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingBottom="10dp">
+    android:paddingBottom="10dp"
+   >
     
     <ImageView
+        android:id="@+id/card_img"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/poly"
         android:scaleType="fitCenter"/>
     <TextView
+
+        android:id="@+id/card_textview"
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:background="@color/blue"
