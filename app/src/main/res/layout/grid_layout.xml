@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+android:padding="2dp"
+    android:background="@drawable/border">
+    <ImageView
+        android:id="@+id/grid_img"
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/d3"/>
+
+    <Button
+        android:id="@+id/grid_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PRODUCT NAME"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/transparent"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/mediumFont"/>
+    <RelativeLayout
+        android:id="@+id/relative_productDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/product_namr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PRODUCT NAME"
+            android:layout_gravity="center"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/mediumFont" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rs.500"
+            android:layout_below="@+id/product_namr"
+            android:layout_gravity="center"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/mediumFont" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="center"
+            android:background="@drawable/d3"/>
+    </RelativeLayout>
+</LinearLayout></LinearLayout>
+</android.support.constraint.ConstraintLayout>
