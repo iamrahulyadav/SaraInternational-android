@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/dark_grey"
+            android:paddingBottom="20dp">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="40dp"
+                android:text="ORDER PLACED"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/d1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="CANCELLATION CONFIRMED"
+                android:gravity="center"
+                android:textSize="@dimen/largeFont"
+                android:textColor="@color/black"
+                />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/blue"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="CHECK STATUS"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumFont" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_grey"
+        android:padding="10dp">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Keep Shopping >"
+            android:gravity="center"
+            android:textSize="@dimen/mediumFontL"
+            android:textColor="@color/black"
+            />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey_light" />
+
+        <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="View All Order >"
+        android:gravity="center"
+            android:layout_gravity="center"
+        android:textSize="@dimen/mediumFontL"
+        android:textColor="@color/black"
+        />
+    </LinearLayout></RelativeLayout>
+</android.support.constraint.ConstraintLayout>
