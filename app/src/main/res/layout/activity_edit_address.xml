@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.codemaven3015.sarainternational.EditAddress">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp">
+            <LinearLayout
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ADD A NEW ADDRESS"
+                    android:textSize="@dimen/mediumFontL"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:background="@drawable/border">
+
+                <EditText
+                    android:textSize="@dimen/smallFontL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pinCodeEditText"
+                    android:hint="Pin Code *"/>
+                    <EditText
+                        android:textSize="@dimen/smallFontL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/townEditText"
+                        android:hint="Local/Town *"/>
+                    <EditText
+                        android:textSize="@dimen/smallFontL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cityEditText"
+                        android:hint="City/Distric *"/>
+                    <EditText
+                        android:textSize="@dimen/smallFontL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/stateEditText"
+                        android:hint="State*"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border">
+
+                    <EditText
+                        android:textSize="@dimen/smallFontL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nameEditText"
+                        android:hint="Name *"/>
+                    <EditText
+                        android:textSize="@dimen/smallFontL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addressEditText"
+                        android:hint="Address *"/>
+                    <EditText
+                        android:textSize="@dimen/smallFontL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mobileEditText"
+                        android:hint="Mobile Number *"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/mediumFont"
+                        android:text="Type of address"/>
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="Home"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Office/Commercial"/>
+                    </RadioGroup>
+                    <CheckBox
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Make this my default address"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <View
+                android:layout_alignParentTop="true"
+                android:id="@+id/lineSeprator"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="#c7c7bf" />
+            <Button
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dp"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:text="CANCEL"/>
+            <Button
+                android:layout_marginRight="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/blue"
+                android:layout_centerVertical="true"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:text="SUBMIT"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
