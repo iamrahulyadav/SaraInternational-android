@@ -115,7 +115,7 @@ public class Filter extends AppCompatActivity {
         Color.add("#f33333");
         Color.add("#fcff00");
         Color.add("#f33333");
-        Color.add("#fcff00");
+        Color.add("#fcff00" );
 
         listDataChild.put(listDataHeader.get(0), category); // Header, Child data
         listDataChild.put(listDataHeader.get(1), Type);
