@@ -18,16 +18,17 @@
         <activity android:name=".Payment_page" />
         <activity android:name=".Payment_Address" />
         <activity android:name=".Customize_Product">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Filter"></activity>
 
         <activity android:name=".Track_Package" />
-        <activity android:name=".My_Order_Details"></activity>
+
+        <activity android:name=".My_Order_Details"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
     </application>
 
 </manifest>
