@@ -1,19 +1,13 @@
 package com.example.codemaven3015.sarainternational;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
-/**
- * Created by Admin on 4/4/2018.
- */
-
-public class Product_Detail extends android.support.v4.app.Fragment {
+public class ProductCategorieDetails extends AppCompatActivity {
     GridView gridView;
     String[] gridViewString = {"PRODUCT NAME", "PRODUCT NAME", "PRODUCT NAME",
             "PRODUCT NAME", "PRODUCT NAME", "PRODUCT NAME"} ;
@@ -21,17 +15,18 @@ public class Product_Detail extends android.support.v4.app.Fragment {
             R.drawable.d4, R.drawable.d1, R.drawable.d2, R.drawable.d3,
             R.drawable.d4, R.drawable.d1
     };
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.product,container,false);
-        gridView=view.findViewById(R.id.gridView);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_product_categorie_details);
+        gridView=findViewById(R.id.gridView);
         setGridData();
-              return view;
+
     }
+
     private void setGridData()
     {
-       ProductGridView adapterViewAndroid = new ProductGridView(getContext(), gridViewString, gridViewImageId,"");
+        ProductGridView adapterViewAndroid = new ProductGridView(this, gridViewString, gridViewImageId,"cat");
 
         gridView.setAdapter(adapterViewAndroid);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -39,7 +34,7 @@ public class Product_Detail extends android.support.v4.app.Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int i, long id) {
-                Toast.makeText(getContext(), "GridView Item: " + gridViewString[+i], Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, "GridView Item: " + gridViewString[+i], Toast.LENGTH_LONG).show();
             }
         });
     }

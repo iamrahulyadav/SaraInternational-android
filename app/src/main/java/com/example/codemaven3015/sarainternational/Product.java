@@ -1,5 +1,6 @@
 package com.example.codemaven3015.sarainternational;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -31,16 +32,17 @@ public class Product extends android.support.v4.app.Fragment {
     }
     private void setGridData()
     {
-       ProductGridView adapterViewAndroid = new ProductGridView(getContext(), gridViewString, gridViewImageId);
-
-        gridView.setAdapter(adapterViewAndroid);
+       ProductGridView adapterViewAndroid = new ProductGridView(getContext(), gridViewString, gridViewImageId,"Product");
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int i, long id) {
+                Intent intent = new Intent(getContext(),ProductCategorieDetails.class);
+                startActivity(intent);
                 Toast.makeText(getContext(), "GridView Item: " + gridViewString[+i], Toast.LENGTH_LONG).show();
             }
         });
+        gridView.setAdapter(adapterViewAndroid);
     }
 }
