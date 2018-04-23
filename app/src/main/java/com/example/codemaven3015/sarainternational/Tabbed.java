@@ -100,6 +100,11 @@ public class Tabbed extends AppCompatActivity implements NavigationView.OnNaviga
         Intent i ;
         if (id == R.id.profile) {
         }
+        if (id == R.id.order)
+        {
+            i = new Intent(Tabbed.this,Order_Card.class);
+            //startActivity(i);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

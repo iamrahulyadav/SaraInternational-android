@@ -9,8 +9,8 @@
             android:id="@+id/profile"
             android:title="Profile" />
         <item
-            android:id="@+id/registration"
-            android:title="Registration" />
+            android:id="@+id/order"
+            android:title="Order" />
 
         <item
             android:id="@+id/booking"
