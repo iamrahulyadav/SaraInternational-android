@@ -1,10 +1,12 @@
 package com.example.codemaven3015.sarainternational;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -21,8 +23,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class Tabbed extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -51,6 +59,7 @@ public class Tabbed extends AppCompatActivity implements NavigationView.OnNaviga
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        setNotification();
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -69,6 +78,43 @@ public class Tabbed extends AppCompatActivity implements NavigationView.OnNaviga
         setMenuOnClick();
 
 
+    }
+
+    private void setNotification() {
+         ImageButton notificationButton = findViewById(R.id.notificationButton);
+        notificationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNorificationPopUp(v);
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
+
+    public void showNorificationPopUp(View v){
+        LayoutInflater layoutInflater = (LayoutInflater) this
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = layoutInflater.inflate(R.layout.notification_list,null);
+        ListView listView = layout.findViewById(R.id.notification_listView);
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Congo! your request has been send your request has been send your request has been send....");
+        list.add("Congo! your request has been send your request has been send your request has been send....");
+        int images[] = {R.drawable.notification,
+                R.drawable.notification};
+        ListApdapter listApdapter = new ListApdapter(list,this,images);
+        listView.setAdapter(listApdapter);
+        layout.measure(View.MeasureSpec.UNSPECIFIED,
+                View.MeasureSpec.UNSPECIFIED);
+        final PopupWindow popup = new PopupWindow(layout, FrameLayout.LayoutParams.WRAP_CONTENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT,true);
+        //popup.setContentView(layout);
+        popup.setFocusable(true);
+        popup.setBackgroundDrawable(ContextCompat.getDrawable(this, R.color.transparent));
+        popup.showAsDropDown(v,5,5);
     }
     //menu bar
 

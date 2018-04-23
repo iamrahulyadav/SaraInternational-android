@@ -6,7 +6,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/blue"
+        android:background="@color/grey_light"
         >
         <ImageButton
             android:layout_alignParentLeft="true"
@@ -16,7 +16,38 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/menubar"
+            android:src="@drawable/menu_bar"
+            android:background="@color/transparent"/>
+        <ImageButton
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/wishlistButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/wishlist"
+            android:background="@color/transparent"/>
+
+        <ImageButton
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="90dp"
+            android:id="@+id/notificationButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/notification"
+            android:background="@color/transparent"/>
+        <ImageButton
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="130dp"
+            android:id="@+id/cartButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cart"
             android:background="@color/transparent"/>
         <ImageButton
             android:layout_alignParentRight="true"

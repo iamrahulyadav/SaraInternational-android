@@ -97,6 +97,7 @@ LinearLayout SliderDots;
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new myTimerTask(), 4000 ,4000);
     }
+
     public class myTimerTask extends TimerTask {
         @Override
         public void run() {
