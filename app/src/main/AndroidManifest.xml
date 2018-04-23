@@ -10,11 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Registration" />
         <activity
@@ -29,9 +24,15 @@
         <activity android:name=".Filter" />
         <activity android:name=".Track_Package" />
         <activity android:name=".My_Order_Details" />
-        <activity android:name=".Product_List_Details"></activity>
+        <activity android:name=".Product_List_Details" />
         <activity android:name=".ProductCategorieDetails" />
-        <activity android:name=".Successfully_OrderPlaced"></activity>
+        <activity android:name=".Successfully_OrderPlaced" />
+        <activity android:name=".Chat_with_Admin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter></activity>
     </application>
 
 </manifest>
