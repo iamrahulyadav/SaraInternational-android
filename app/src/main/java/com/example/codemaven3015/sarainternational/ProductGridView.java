@@ -65,7 +65,7 @@ public class ProductGridView extends BaseAdapter {
                         Intent intent=new Intent(mContext,ProductCategorieDetails.class);
                         mContext.startActivity(intent);
                     }else{
-                        Intent intent=new Intent(mContext,Customize_Product.class);
+                        Intent intent=new Intent(mContext,Product_List_Details.class);
                         mContext.startActivity(intent);
                     }
 

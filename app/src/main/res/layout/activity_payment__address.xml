@@ -253,14 +253,16 @@ Noida"
                 android:layout_below="@+id/footer_priceTextview"
                 android:textColor="@color/blue"
                 android:textSize="@dimen/mediumFont" />
+
             <Button
+                android:id="@+id/continueBtn"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
+                android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:text="Continue"
                 android:background="@color/blue"
-                android:textColor="@color/white"
-                android:layout_alignParentRight="true"/>
+                android:text="Continue"
+                android:textColor="@color/white" />
 
         </RelativeLayout>
 

@@ -10,14 +10,16 @@
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingBottom="50dp">
-
+        android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp">
     <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
@@ -41,7 +43,15 @@
 
         </LinearLayout>
     </RelativeLayout>
-<TextView
+        <View
+
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/dark_grey" />
+
+        <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textSize="@dimen/mediumFontL"
@@ -49,7 +59,7 @@
     android:textColor="@color/black"
     android:layout_marginLeft="10dp"/>
 
-    </LinearLayout>
+    
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,18 +88,356 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="10dp"
-            android:background="@color/green">
+            android:layout_margin="10dp"
+           >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:background="@color/green">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5.0" />
+                android:text="5.0"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumFont"/>
 
             <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/btn_star" />
+
+            </LinearLayout>
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/green" />
+                android:text="2 Rating  1 Review"
+                android:textAlignment="center"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textSize="@dimen/smallFontL"/>
+
+            <Button
+                android:id="@+id/customButton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@color/green"
+                android:padding="3dp"
+                android:text="Customize Product"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smallFontL" />
         </LinearLayout>
         </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quantity:1500 Pieces"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/mediumFont"
+                android:textColor="@color/blue"/>
+        <View
+
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/dark_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/share" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/mediumFont"/>
+
+
+        </LinearLayout>
+            <View
+                android:layout_width="2dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#c7c7bf" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/share" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wishlist"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/mediumFont"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/dark_grey" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            android:textSize="@dimen/largeFont"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/border">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/mediumFontL"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Producers of plastic garbage bags are aiming to make trash day less stinky. Manufacturers are tweaking the plastic of garbage bags so they protect people from odorous assaults from the contents of the bags. Adding scents to the bags to mask the smell of trash."
+                android:textSize="@dimen/mediumFont"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Features:"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/mediumFontL"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Elegant Design
+Longevity
+Tear Resistance"
+                android:textSize="@dimen/mediumFont"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Information"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/mediumFontL"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_margin="20dp">
+                <TableRow>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="Manufacturer"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/mediumFont"/>
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#c7c7bf" />
+
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:padding="3dip"
+                        android:text="Manufacturer"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/mediumFont"/>
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/dark_grey" />
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="Item part Number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/mediumFont"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#c7c7bf" />
+                    <TextView
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:padding="3dip"
+                        android:text="Manufacturer"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/mediumFont"/>
+                </TableRow>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/dark_grey" />
+                <TableRow>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="Best Sellers Rank"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/mediumFont"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#c7c7bf" />
+                    <TextView
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:padding="3dip"
+                        android:text="Manufacturer"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/mediumFont"
+                        android:layout_marginBottom="10dp"/>
+                </TableRow>
+
+
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/dark_grey"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/share" />
+            <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/mediumFont"
+                /></LinearLayout>
+            <LinearLayout
+                android:id="@+id/buyNowBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+                android:layout_weight="1"
+                android:background="@color/green">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/green"
+                    android:gravity="center"
+                    android:text="Buy Now"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/mediumFont" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+</RelativeLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

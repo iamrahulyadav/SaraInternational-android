@@ -135,6 +135,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/submit"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:layout_gravity="center"

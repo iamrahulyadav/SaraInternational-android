@@ -6,26 +6,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class Customize_Product extends AppCompatActivity {
+public class Successfully_OrderPlaced extends AppCompatActivity {
 
-    TextView submit;
-
+    TextView viewDetails;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customize__product);
-        submit=findViewById(R.id.submit);
-        submit.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_successfully__order_placed);
+        viewDetails=findViewById(R.id.viewDetails);
+        viewDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setsubmit();
+                setviewDetails();
             }
         });
     }
 
-    private void setsubmit()
+    private void setviewDetails()
     {
-        Intent i = new Intent(Customize_Product.this,Product_List_Details.class);
+        Intent i = new Intent(Successfully_OrderPlaced.this,My_Order_Details.class);
         startActivity(i);
     }
 }

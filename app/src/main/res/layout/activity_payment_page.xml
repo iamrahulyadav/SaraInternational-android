@@ -302,6 +302,7 @@ Noida"
                         android:textSize="@dimen/mediumFont" />
 
                     <TextView
+                        android:id="@+id/changeAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -332,14 +333,16 @@ Noida"
                         android:layout_below="@+id/footer_priceTextview"
                         android:textColor="@color/blue"
                         android:textSize="@dimen/mediumFont" />
+
                     <Button
+                        android:id="@+id/payNowBtn"
                         android:layout_width="80dp"
                         android:layout_height="30dp"
-                       android:layout_centerVertical="true"
-                        android:text="Pay Now"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
                         android:background="@color/blue"
-                        android:textColor="@color/white"
-                        android:layout_alignParentRight="true"/>
+                        android:text="Pay Now"
+                        android:textColor="@color/white" />
 
                 </RelativeLayout>
 

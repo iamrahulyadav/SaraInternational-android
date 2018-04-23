@@ -22,13 +22,16 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme" />
         <activity android:name=".Payment_page" />
+        <activity android:name=".AddressList" />
+        <activity android:name=".EditAddress" />
         <activity android:name=".Payment_Address" />
         <activity android:name=".Customize_Product" />
         <activity android:name=".Filter" />
         <activity android:name=".Track_Package" />
-        <activity android:name=".My_Order_Details"></activity>
-        <activity android:name=".Product_List_Details" />
-        <activity android:name=".ProductCategorieDetails"></activity>
+        <activity android:name=".My_Order_Details" />
+        <activity android:name=".Product_List_Details"></activity>
+        <activity android:name=".ProductCategorieDetails" />
+        <activity android:name=".Successfully_OrderPlaced"></activity>
     </application>
 
 </manifest>

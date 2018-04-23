@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.codemaven3015.sarainternational.Successfully_OrderPlaced">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/dark_grey"
+            android:paddingBottom="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="ORDER PLACED"
+                android:gravity="center"
+                android:textSize="@dimen/largeFont"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Total price for item:Rs 1200"
+                android:gravity="center"
+                android:textSize="@dimen/mediumFont"
+                />
+
+            <TextView
+                android:id="@+id/viewDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="View Details >"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/largeFont" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Delivery by friday,9 April 2018"
+                android:gravity="center"
+                android:textSize="@dimen/largeFont"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Codemaven"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/largeFont"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Codemaven
+B19
+Noida"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/largeFont"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

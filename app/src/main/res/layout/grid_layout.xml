@@ -56,6 +56,7 @@ android:padding="2dp"
             android:textSize="@dimen/mediumFont" />
 
         <ImageView
+            android:id="@+id/cartImg"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
