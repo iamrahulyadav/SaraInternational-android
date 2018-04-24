@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
@@ -15,7 +17,7 @@ import android.widget.TextView;
 public class Order_Card extends RecyclerView.Adapter<Order_Card.ViewHolder> {
 
     private Context context;
-
+    int lastposition = -1;
 
     public Order_Card(Context context) {
         this.context = context;
@@ -50,11 +52,21 @@ public class Order_Card extends RecyclerView.Adapter<Order_Card.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(final ViewHolder viewHolder, int i) {
        viewHolder.card_img.setImageResource(images[i]);
         viewHolder. status.setText(status[i]);
         viewHolder. product_name.setText(product_name[i]);
         viewHolder.circularTextView.setSolidColor("#5064a5");
+        viewHolder.order_LL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //notifyDataSetChanged();
+
+                viewHolder.order_details_LL.setVisibility(View.VISIBLE);
+                viewHolder.card_img.setVisibility(View.GONE);
+                viewHolder.order_LL.setVisibility(View.GONE);
+            }
+        });
 
     }
 
@@ -67,9 +79,10 @@ public class Order_Card extends RecyclerView.Adapter<Order_Card.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         public int currentItem;
 
-        ImageView card_img;;
+        ImageView card_img;
         TextView status,product_name;
         CircularTextView circularTextView;
+        LinearLayout order_LL,order_details_LL;
 
 
         public ViewHolder(View itemView) {
@@ -77,13 +90,12 @@ public class Order_Card extends RecyclerView.Adapter<Order_Card.ViewHolder> {
             card_img=itemView.findViewById(R.id.card_img);
             status=itemView.findViewById(R.id.status);
             product_name=itemView.findViewById(R.id.product_name);
+            order_LL = itemView.findViewById(R.id.order_LL);
+            order_details_LL = itemView.findViewById(R.id.order_details_LL);
+            order_details_LL.setVisibility(View.GONE);
             circularTextView=itemView.findViewById(R.id.circularTextView);
     }
 
 
-
-    public void startDetailsActivity(){
-
-    }
 
 }}

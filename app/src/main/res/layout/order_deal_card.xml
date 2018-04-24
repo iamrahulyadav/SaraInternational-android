@@ -14,12 +14,14 @@
     card_view:contentPadding="4dp"
         >
         <RelativeLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:background="@color/grey_light"
            >
             <LinearLayout
+                android:id="@+id/order_LL"
                 android:layout_alignParentLeft="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,6 +65,10 @@
                 android:layout_height="80dp"
                android:layout_marginLeft="45dp"
                 android:background="@drawable/d3"/>
+
+            <include layout="@layout/onclicked_order_details">
+
+            </include>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </android.support.constraint.ConstraintLayout>

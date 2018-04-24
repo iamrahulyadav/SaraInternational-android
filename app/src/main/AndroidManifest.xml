@@ -24,16 +24,19 @@
         <activity android:name=".Customize_Product" />
         <activity android:name=".Filter" />
         <activity android:name=".Track_Package" />
-        <activity android:name=".My_Order_Details" />
-        <activity android:name=".Product_List_Details" />
-        <activity android:name=".ProductCategorieDetails" />
-        <activity android:name=".Successfully_OrderPlaced" />
-        <activity android:name=".Chat_with_Admin">
+        <activity android:name=".My_Order_Details" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter></activity>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Product_List_Details" />
+        <activity android:name=".ProductCategorieDetails" >
+        </activity>
+        <activity android:name=".Successfully_OrderPlaced" />
+        <activity android:name=".Chat_with_Admin">
+            </activity>
     </application>
 
 </manifest>
